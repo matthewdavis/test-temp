@@ -2,7 +2,7 @@
 title: Quartz Site Setup Guide
 ---
 
-These steps give you your own notes website at `https://<your-username>.github.io/olicashmoney/`, rebuilt automatically every time you push changes. Setup takes about 20 minutes.
+These steps give you your own notes website at `https://olicashmoney.github.io/<repo-name>/`, rebuilt automatically every time you push changes. Setup takes about 20 minutes.
 
 ## Before you start
 
@@ -34,7 +34,7 @@ The first lets PowerShell run `npx`. The second stops Git from failing on Quartz
 ### 1. Create your repo from the template
 
 1. Go to [matthewdavis/test-temp](https://github.com/matthewdavis/test-temp) and click **Use this template → Create a new repository**.
-2. Name it `olicashmoney` and make it **Public**. Free GitHub accounts can only publish public repos to Pages.
+2. Pick a name (for example `notes`) and make it **Public**. Free GitHub accounts can only publish public repos to Pages.
 3. GitHub starts a "Deploy Quartz site to GitHub Pages" run right away. It will fail because Pages isn't turned on yet. That's expected; you'll rerun it in step 2.
 
 ### 2. Turn on GitHub Pages
@@ -46,8 +46,8 @@ Then go to **Actions → Deploy Quartz site to GitHub Pages → Run workflow** t
 ### 3. Download it and set your site's address
 
 ```shell
-git clone https://github.com/<your-username>/olicashmoney.git
-cd olicashmoney
+git clone https://github.com/olicashmoney/<repo-name>.git
+cd <repo-name>
 npm ci
 ```
 
@@ -55,7 +55,7 @@ Open `quartz.config.yaml` and change these two lines:
 
 ```yaml
 pageTitle: My Notes                              # whatever you like
-baseUrl: <your-username>.github.io/olicashmoney   # no https://, no trailing slash
+baseUrl: olicashmoney.github.io/<repo-name>   # no https://, no trailing slash
 ```
 
 ### 4. Preview on your computer
@@ -75,7 +75,7 @@ On Windows, a firewall prompt may appear the first time you run the preview. Cli
 npx quartz sync
 ```
 
-This commits your changes and pushes them. About a minute later the site is live at `https://<your-username>.github.io/olicashmoney/`. You can watch the deploy in the **Actions** tab.
+This commits your changes and pushes them. About a minute later the site is live at `https://olicashmoney.github.io/<repo-name>/`. You can watch the deploy in the **Actions** tab.
 
 ## Day to day
 
