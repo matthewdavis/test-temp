@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: matthewdavis.github.com/test-temp
+  baseUrl: matthewdavis.me/test-temp
   ignorePatterns:
     - private
     - templates
